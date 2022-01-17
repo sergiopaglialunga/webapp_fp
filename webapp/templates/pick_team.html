@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block title %}Main2{% endblock %}
+
+{% block content %}
+
+<body>       
+    <div class="w3-top w3-bar w3-blue" style="opacity: 0.8;">
+        <a href="/my_team" class="w3-bar-item w3-button dark"><h3>My Team</h3></a>
+        <a href="/pick_team" class="w3-bar-item w3-button dark"><h3>Pick Team</h3></a>
+        <a href="/" class="w3-bar-item w3-button dark"><h3>Sign out</h3></a>
+        <h3 class="w3-right-align w3-margin-right">You are logged in as {{ template_username }}</h3>
+    </div>  
+    
+    <div class="w3-container w3-teal w3-display-middle">
+            <h2>Pick Team</h2>
+    </body>
+
+        <form class="w3-container" action="/pick_team" method="post">
+            <div class="w3-row-padding">
+                <div class="w3-half">
+                    <label class="w3-text-blak"><b>Team Name</b></label>
+                    <input class="w3-input w3-border w3-light-grey" type="text" name="teamName">
+                </div>
+                <div class="w3-half">
+                    <label class="w3-text-blak"><b>Goalkeeper</b></label>
+                    <select class="w3-select" name="goalkeeper">
+                        <option disabled selected><p></p></option>
+                        {% for goalkeeper in template_goalkeepers %}
+                            <option>{{ goalkeeper }}</option>
+                        {% endfor %}            
+                    </select>
+                </div>
+            </div>            
+            <div class="w3-row-padding">
+                <div class="w3-third">
+                    <label class="w3-text-white"><b>Defender 1</b></label>
+                    <select class="w3-select" name="defender1">
+                        <option disabled selected></option>
+                        {% for defender in template_defenders %}
+                            <option>{{ defender }}</option>
+                        {% endfor %}            
+                    </select>
+                </div>
+                <div class="w3-third">
+                    <label class="w3-text-blak"><b>Defender 2</b></label>
+                    <select class="w3-select" name="defender2">
+                        <option disabled selected></option>
+                        {% for defender in template_defenders %}
+                            <option>{{ defender }}</option>
+                        {% endfor %}            
+                    </select>
+                </div>
+                <div class="w3-third">
+                    <label class="w3-text-blak"><b>Defender 3</b></label>
+                    <select class="w3-select" name="defender3">
+                        <option disabled selected></option>
+                        {% for defender in template_defenders %}
+                            <option>{{ defender }}</option>
+                        {% endfor %}            
+                    </select>
+                </div>
+            </div>
+            
+            <div class="w3-row-padding">
+                <div class="w3-half">
+                    <label class="w3-text-blak"><b>midfielder 1</b></label>
+                    <select class="w3-select" name="midfielder1">
+                        <option disabled selected></option>
+                        {% for midfielder in template_midfielders %}
+                            <option>{{ midfielder }}</option>
+                        {% endfor %}            
+                    </select>      
+                </div>
+                <div class="w3-half">
+                    <label class="w3-text-blak"><b>midfielder 2</b></label>
+                    <select class="w3-select" name="midfielder2">
+                        <option disabled selected></option>
+                        {% for midfielder in template_midfielders %}
+                            <option>{{ midfielder }}</option>
+                        {% endfor %}            
+                    </select>  
+                </div>
+            </div>
+            
+            <div class="w3-row-padding">
+                <div class="w3-half">
+                    <label class="w3-text-blak"><b>midfielder 3</b></label>
+                    <select class="w3-select" name="midfielder3">
+                        <option disabled selected></option>
+                        {% for midfielder in template_midfielders %}
+                            <option>{{ midfielder }}</option>
+                        {% endfor %}            
+                    </select>      
+                </div>
+                <div class="w3-half">
+                    <label class="w3-text-blak"><b>midfielder 4</b></label>
+                    <select class="w3-select" name="midfielder4">
+                        <option disabled selected></option>
+                        {% for midfielder in template_midfielders %}
+                            <option>{{ midfielder }}</option>
+                        {% endfor %}            
+                    </select>  
+                </div>
+            </div>
+            
+            <div class="w3-row-padding">
+                <div class="w3-third">
+                    <label class="w3-text-blak"><b>forward 1</b></label>
+                    <select class="w3-select" name="forward1">
+                        <option disabled selected></option>
+                        {% for forward in template_forwards %}
+                            <option>{{ forward }}</option>
+                        {% endfor %}            
+                    </select>
+                </div>
+                <div class="w3-third">
+                    <label class="w3-text-blak"><b>forward 2</b></label>
+                    <select class="w3-select" name="forward2">
+                        <option disabled selected></option>
+                        {% for forward in template_forwards %}
+                            <option>{{ forward }}</option>
+                        {% endfor %}            
+                    </select>
+                </div>
+                <div class="w3-third">
+                    <label class="w3-text-blak"><b>forward 3</b></label>
+                    <select class="w3-select" name="forward3">
+                        <option disabled selected></option>
+                        {% for forward in template_forwards %}
+                            <option>{{ forward }}</option>
+                        {% endfor %}            
+                    </select>
+                </div>
+            </div>
+                        
+            <button class="w3-btn w3-blue-grey w3-button w3-right w3-round-large w3-large w3-margin" type="submit">Save my team</button>
+      
+        </form>     
+
+</body>        
+
+{% endblock %}
