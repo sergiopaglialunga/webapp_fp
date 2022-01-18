@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('build'){
       steps{
-        sh 'cd /var/jenkins_home/workspace/MultiBranchPipeline-job_master/webapp'
+        sh 'cd /var/jenkins_home/workspace/MultiBranchPipeline-job_master'
         sh 'docker-compose -f cd /var/jenkins_home/workspace/MultiBranchPipeline-job_master/webapp/docker-compose.yml up --build'
       }
     }
