@@ -11,8 +11,7 @@ pipeline {
   
     
     stage('test'){
-      steps{
-        def test = 2 + 2 > 3? 'pass':'fail'
+      steps{        
         echo 'Test stage executed.'
       }
     }
