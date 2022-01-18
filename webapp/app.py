@@ -30,8 +30,6 @@ forwards = ['Ronaldo','Kane',	'Lukaku,', 'Vardy', 'Aubameyang', 'Firmino', 'Wern
             'Lacazette', 'Cavani', 'Calvert-Lewin', 'Antonio', 'Watkins', 'Bamford', 'Ings',
             'Martial', 'Richarlison', 'Jiménez', 'Wilson', 'Daka', 'Iheanacho']
 
-team_id = 1
-
 @app.route('/')
 def index():
     return render_template("sign_in.html")
@@ -94,7 +92,6 @@ def verify():
 
     return render_template("sign_in.html", message="You are not a registered user!")
 
-
 @app.route('/pick_team',  methods=['POST','GET'])
 def pick_team():
     if request.method == 'POST':
@@ -133,7 +130,6 @@ def pick_team():
 
     return render_template("pick_team.html", template_username=userName, template_goalkeepers=goalkeepers, template_defenders=defenders, 
                             template_midfielders=midfielders, template_forwards=forwards)
-
 
 @app.route('/my_team')
 def my_team():
