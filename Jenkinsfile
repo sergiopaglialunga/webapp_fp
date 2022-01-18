@@ -5,7 +5,7 @@ pipeline {
     stage('build'){
       steps{
         echo 'Test stage executed.'
-        sh 'docker-compose -f C:\ProgramData\Jenkins\.jenkins\workspace\MultiBranchPipeline-Job\webapp\docker-compose.yml up --build -d'
+        sh 'docker-compose -f /var/jenkins_home/workspace/MultiBranchPipeline-Job/webapp/docker-compose.yml up --build -d'
       }
     }
   
