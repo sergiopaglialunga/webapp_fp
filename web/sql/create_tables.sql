@@ -33,7 +33,7 @@ CREATE TABLE Teams (
 CREATE TABLE ID (
     id int,
     user_id int,
-    user_name varchar(255),
+    user_name varchar(255)
 );
 
 INSERT INTO ID (id) VALUES (1);

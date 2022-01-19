@@ -20,7 +20,7 @@ class DbRoutines():
 dbRoutines = DbRoutines(app)
 
 goalkeepers = ['Mendy', 'Ederson', 'Alisson', 'Martínez', 'Pope', 'Lloris', 'de Gea', 'Sá', 'Ramsdale', 'Fabianski', 'Patrício', 'Pickford']
-defenders = ['Alexander-Arnold', 'Robertson', 'Cancelo	Man', 'van Dijk', 'Dias', 'Rüdiger', 'James', 
+defenders = ['Alexander-Arnold', 'Robertson', 'Cancelo', 'van Dijk', 'Dias', 'Rüdiger', 'James', 
             'Azpilicueta', 'Alonso', 'Thiago Silva', 'Chilwell', 'Laporte','Varane', 'Zouma', 'Evans', 
             'Walker', 'Maguire', 'Reguilón', 'Gabriel', 'Castagne', 'Stones']
 midfielders = ['Salah', 'De Bruyne', 'Mané', 'Fernandes', 'Sterling', 'Son', 'Rashford', 
@@ -95,6 +95,11 @@ def verify():
 @app.route('/pick_team',  methods=['POST','GET'])
 def pick_team():
     if request.method == 'POST':
+        if (request.form['teamName'] != "" and request.form['goalkeeper'] != "" and request.form['defender1'] != "" and 
+            request.form['defender2'] != "" and request.form['defender3'] != "" and request.form['midfielder1'] != "" and 
+            request.form['midfielder2'] != "" and request.form['midfielder3'] != "" and request.form['midfielder4'] != "" and 
+            request.form['forward1'] != "" and request.form['forward2'] != "" and request.form['forward3'] != ""):
+           
             teamName = request.form['teamName']
             goalkeeper = request.form['goalkeeper']
             defender1 = request.form['defender1']
@@ -118,7 +123,7 @@ def pick_team():
             dbRoutines.mysql.connection.commit()
             user_list = cursor.fetchall()
             cursor.close()
-
+                
             return render_template("my_team.html", template_username=userName, template_team=user_list)
 
     cursor = dbRoutines.mysql.connection.cursor()
@@ -128,7 +133,7 @@ def pick_team():
     userName = user_list[0]['user_name'] 
     cursor.close()
 
-    return render_template("pick_team.html", template_username=userName, template_goalkeepers=goalkeepers, template_defenders=defenders, 
+    return render_template("pick_team.html", message = "Please, select all your players!", template_username=userName, template_goalkeepers=goalkeepers, template_defenders=defenders, 
                             template_midfielders=midfielders, template_forwards=forwards)
 
 @app.route('/my_team')
