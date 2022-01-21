@@ -14,9 +14,6 @@ class DbRoutines():
         self.mysql = MySQL()
         self.mysql.init_app(app)
         
-    def user_credentials(self):
-        return "test"
-
 dbRoutines = DbRoutines(app)
 
 goalkeepers = ['Mendy', 'Ederson', 'Alisson', 'Martínez', 'Pope', 'Lloris', 'de Gea', 'Sá', 'Ramsdale', 'Fabianski', 'Patrício', 'Pickford']
@@ -41,7 +38,8 @@ def login():
 @app.route('/sign_up', methods=['POST','GET'])
 def sign_up():
     if request.method == 'POST':
-        if request.form['uname'] != "" and request.form['pwd'] != "" and request.form['repwd'] != "" and request.form['pwd'] == request.form['repwd']:
+        if (request.form['uname'] != "" and request.form['pwd'] != "" and request.form['repwd'] != "" and 
+        request.form['pwd'] == request.form['repwd']):
             userName = request.form['uname']
             userPwd = request.form['pwd']
             cursor = dbRoutines.mysql.connection.cursor()
