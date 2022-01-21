@@ -94,9 +94,9 @@ def verify():
 def pick_team():
     if request.method == 'POST':
         if (request.form['teamName'] != "" and request.form['goalkeeper'] != "" and request.form['defender1'] != "" and 
-            request.form['defender2'] != "" and request.form['defender3'] != "" and request.form['midfielder1'] != "" and 
-            request.form['midfielder2'] != "" and request.form['midfielder3'] != "" and request.form['midfielder4'] != "" and 
-            request.form['forward1'] != "" and request.form['forward2'] != "" and request.form['forward3'] != ""):
+        request.form['defender2'] != "" and request.form['defender3'] != "" and request.form['midfielder1'] != "" and 
+        request.form['midfielder2'] != "" and request.form['midfielder3'] != "" and request.form['midfielder4'] != "" and 
+        request.form['forward1'] != "" and request.form['forward2'] != "" and request.form['forward3'] != ""):
            
             teamName = request.form['teamName']
             goalkeeper = request.form['goalkeeper']

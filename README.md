@@ -54,3 +54,5 @@ This helped me to isolate what was broken in my application to fix it faster.
 ## Video recording
 
 Link to the video that shows the app, hosted on Google drive: 
+
+https://drive.google.com/file/d/16GWb8RL_j1Gro3mufE7fvGI4aPYKTowc/view?usp=sharing
