@@ -4,7 +4,7 @@
 
 The application is a Fantasy Football app 
 
-The users have to sign un with a username and password
+The users have to sign up with a username and password
 
 When the users sign in, they can pick a football team 
 choosing players from a list of options.
@@ -56,6 +56,7 @@ This helped me to isolate what was broken in my application to fix it faster.
 Link to the video that shows the app, hosted on Google drive: 
 
 https://drive.google.com/file/d/16GWb8RL_j1Gro3mufE7fvGI4aPYKTowc/view?usp=sharing
+<<<<<<< HEAD
 
 ## Screenshots
 
@@ -76,3 +77,5 @@ https://drive.google.com/file/d/16GWb8RL_j1Gro3mufE7fvGI4aPYKTowc/view?usp=shari
 ![Screenshot](/web/webapp/static/images/usersdb.png)
 
 
+=======
+>>>>>>> 6a764e5602c53708e5dac0e7fd5055c6a8ab8540
