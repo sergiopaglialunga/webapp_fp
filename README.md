@@ -4,7 +4,7 @@
 
 The application is a Fantasy Football app 
 
-The users have to sign un with a username and password
+The users have to sign up with a username and password
 
 When the users sign in, they can pick a football team 
 choosing players from a list of options.
