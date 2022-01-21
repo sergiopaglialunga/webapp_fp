@@ -56,3 +56,23 @@ This helped me to isolate what was broken in my application to fix it faster.
 Link to the video that shows the app, hosted on Google drive: 
 
 https://drive.google.com/file/d/16GWb8RL_j1Gro3mufE7fvGI4aPYKTowc/view?usp=sharing
+
+## Screenshots
+
+![Screenshot](/web/webapp/static/images/welcome.png)
+
+![Screenshot](/web/webapp/static/images/signin.png)
+
+![Screenshot](/web/webapp/static/images/signup.png)
+
+![Screenshot](/web/webapp/static/images/pickplayers.png)
+
+![Screenshot](/web/webapp/static/images/pickteam.png)
+
+![Screenshot](/web/webapp/static/images/myteam.png)
+
+![Screenshot](/web/webapp/static/images/teamsdb.png)
+
+![Screenshot](/web/webapp/static/images/usersdb.png)
+
+
